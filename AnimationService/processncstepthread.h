@@ -1,3 +1,8 @@
+//	Author : XuBenHao
+//	Version : 1.0.0
+//	Mail : xbh370970843@163.com
+//	Copyright : XuBenHao 2020 - 2030
+
 #ifndef ANIMATION_SERVICE_PROCESSNCSTEPTHREAD_H
 #define ANIMATION_SERVICE_PROCESSNCSTEPTHREAD_H
 #include "header.h"
