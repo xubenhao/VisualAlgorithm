@@ -121,4 +121,61 @@
 
 用一个独立的模块，来完成xaml模型文件解析，nc文件解析．
 
+７．动画驱动
+
+ａ．AnimationService模块
+
+动画驱动的过程如下，
+
+依据运动任务类型和模型信息生成由控制指令构成的NC文件
+
+AnimationService提供启动动画的接口
+
+执行过程如下：
+
+ParseNcThread线程负责解析NC文件得到NCCODE指令，放入队列缓冲区
+
+InterpolateNcCodeThread线程作为消费者取NCCODE指令，对其进行插补处理，得到NCSTEP，放入队列缓冲区
+
+ProcessNcStepThread线程作为消费者取NCSTEP指令，将一个或多个NCSTEP指令合成为一个NCSHOW指令，放入队列缓冲区
+
+主线程［界面线程］启动一个定时器，在处于动画运行状态时，每隔20ms，作为消费者取一条NCSHOW指令，进行界面显示
+
+备注：
+
+目前实现多线程间共享与同步，用的是信号量＋互斥锁，
+
+后续也许可以考虑全部替换为更简单直接的互斥量＋条件变量来代替．
+
+ｂ．Sync模块
+
+本模块的fixbufferfor1p1c实现了一个固定容量的一个消费者一个生产者的队列
+
+８．指令体系
+
+ａ．NcCode模块
+
+目前支持的NCCODE有
+
+提示指令，如
+
+Tip={ Value="将删除元素移出数组"; }
+
+部件移动指定，如
+
+Move={ Type=1; MoveObjs={ Name="1", Id=7, Pos=200.000000,PosWay=1; } }
+
+颜色控制指令，如
+
+Color={ Name="1", Id=7, Value=(153,153,153,255);}
+
+ｂ．NcStep模块
+
+描述插补后的NCCODE
+
+ｃ．NcShow模块
+
+描述可直接用于界面呈现和处理的指令
+
+
 
