@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ArraySummaryWidget</class>
+ <widget class="QWidget" name="ArraySummaryWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>432</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>85</red>
+           <green>170</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>85</red>
+           <green>170</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>190</red>
+           <green>190</green>
+           <blue>190</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <family>文泉驿正黑</family>
+       <pointsize>18</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>１．数组是一个管理多个元素的容器
+２．数组支持容器应该支持的
+查找元素，添加元素，删除元素，元素遍历操作．
+３．数组的特点
+ａ．逻辑上相邻的元素物理存储上也相邻，
+基于此性质，对数组通过索引访问其元素时，时间复杂度为O(1)
+ｂ．数组实现较为简单
+４．数组相比其他容器的不足
+ａ．通过值查找时，需要对数组内元素依次比较，时间复杂度为O(N)
+ｂ．执行指定位置插入时，插入位置及其后元素均要依次后移，时间复杂度为O(N)
+ｃ．执行指定位置删除时，删除位置后元素均要依次前移，时间复杂度为O(N)
+5．评价
+需管理的元素数量规模不大时，可作为容器对其管理</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
