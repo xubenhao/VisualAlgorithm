@@ -1,4 +1,11 @@
 # VisualAlgorithm
+
+## 软件运行界面＆及功能展示
+  
+  具体信息见https://github.com/xubenhao/VisualAlgorithm/wiki
+  
+## 代码模块及其功能
+
 １．通用２Ｄ建模
 
 ａ．Struct模块
@@ -191,3 +198,13 @@ Color={ Name="1", Id=7, Value=(153,153,153,255);}
 
 用于提供一些公共功能类，供应用使用．
 
+
+### 实现技术＆运行平台＆预览版本下载＆后期规划
+  
+１．基于C++/Qt实现
+
+２．Linux
+
+３．https://github.com/xubenhao/VisualAlgorithm/releases　下载［暂时只提供Linux平台运行版本］
+
+４．暂时只对数组做了完整的可视化实现．后续可扩展到其他数据结构和算法以构成一个完备的软件．
